@@ -39,7 +39,7 @@ if (martian === 'yes' || martian === 'y' ) {
   alert('Actually, he wouldn\'t be opposed to the idea. I mean it would be kinda cool right!?!?!');
   userScore = 0;
 }
-alert('You\'ve guessed correctly' + userScore + ' times.');
+alert('You\'ve guessed correctly ' + userScore + ' times.');
 
 var codeLove = prompt('Does Mike enjoy coding? Y/N?').toLowerCase();
 console.log('Q4. Mike enjoys coding at this point? User says: ' + codeLove + '.');
@@ -50,4 +50,4 @@ if (codeLove === 'yes' || codeLove === 'y' ) {
   alert('So far he does.....so far...ask me again later.');
   userScore = 0;
 }
-alert('You\'ve guessed correctly' + userScore + ' times!');
+alert('You\'ve guessed correctly ' + userScore + ' times!');
