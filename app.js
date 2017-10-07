@@ -118,7 +118,17 @@ if (pieLove === 'yes' || pieLove === 'y' ) {
 
 /*QUESTION 7 Question that requires the user to "guess what I'm thinking". Askes user to guess a number between 1 and 5.
  Randomly changes number so its different each time.*/
-var mindFreak = promp('Lets try and read Mikes mind. He\'s thinking of a number between 1-5? What is it!?!?!');
-console.log( user + ' Is trying to guess a random number between 1 - 5')
-if (mindFreak ===)
-scoreAlert[1];
+var readMe = prompt('Lets try and read Mikes mind. He\'s thinking of a number between 1-5? What is it!?');
+
+var mindFreak = [];
+mindFreak.push(readMe);
+for(var i = 0; i < mindFreak.length;i++){
+  console.log(mindFreak[i]);
+}
+
+while(readMe !== 3.5 || readMe === '' || readMe === null){
+  readMe = prompt('Lets try and read Mikes mind. He\'s thinking of a number between 1-5? What is it!?');
+
+};
+
+var userScore = scoreAlert[1];
