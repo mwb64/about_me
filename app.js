@@ -126,13 +126,49 @@ function question5(){
 };
 question5();
 
-/*function question6(){
-  /*QUESTION 7 Question that requires the user to "guess what I'm thinking". Askes user to guess a number between 1 and 5.
-   Randomly changes number so its different each time.
-  var mindFreak = promp('Lets try and read Mikes mind. He\'s thinking of a number between 1-5? What is it!?!?!');
-  console.log( user + ' Is trying to guess a random number between 1 - 5')
-  if (mindFreak ===)
+function question6(){
+/*QUESTION 6 Question that requires the user asks the user to guess a number from 1 to 5 and converts the answer to a number. User gets four tries. the While Loop ends when they guess the correct number.*/
+var luckyGuess = 3;
+var mindFreak = parseInt(prompt('Lets try and read Mikes mind, you only get 4 tries and can only use whole numbers. He\'s thinking of a number between 1 and 5? What is it!?!?!'));
+var notCorrect = 5;
+var isCorrect = false;
+
+while (isCorrect === false && (notCorrect > 1)){
+  console.log('Inside of while loop.')
+  if(mindFreak === 3){
+   alert('Lucky guess.....');
+    userScore++;
+    mindFreak = luckyGuess;
+    isCorrect = true;
+} else if( mindFreak < 3){
+  notCorrect--;
+    alert('Thats to low, lets give it another try. You have ' + notCorrect + ' tries left!');
+    mindFreak = prompt('He\'s thinking of a number between 1 and 5? What is it!?!?!');
+  } else if( mindFreak > 3){
+    notCorrect--;
+    alert('Thats to high, lets give it another go. You have ' + notCorrect + ' tries left!');
+    mindFreak = prompt('He\'s thinking of a number between 1 and 5? What is it!?!?!');
   scoreAlert[1];
 };
 question6();
-*/
+
+function question7(){
+  var carsOwned =['ford','alfa romeo','buick']
+var notCorrect = 6;
+var car1 = carsOwned[0];
+var car2 = carsOwned[1];
+var car3 = carsOwned[2];
+var carMake = prompt('Can you guess the Make of one of the cars Michael has own? Hint: One is a foreign model that is recent to the US after a long break.').toLowerCase;
+
+while (notCorrect > 0){
+  if(carsOwned.indexOf(carMake) > -1){
+     alert('Thats right! all the cars I\'ve owned include a ' + car1 + ', ' + car2 + ', ' + car3 + '.' );
+    userScore++;
+    notCorrect = 0;
+  } else{
+    carMake = prompt('Nope, thats not on the list, guess again. You have ' + notCorrect + ' tries left.');
+    notCorrect--;
+  }
+};
+};
+question7();
