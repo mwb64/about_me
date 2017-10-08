@@ -10,7 +10,7 @@ console.log('The username for the player is ' + user + '.');
 
 function question1(){
   //QUESTION 1 components
-  whereFrom = prompt('Was Michael born in Washington? Y/N?').toLowerCase();
+  var whereFrom = prompt('Was Michael born in Washington? Y/N?').toLowerCase();
   console.log('Is Michael from Washingtion? ' + whereFrom + '.');
 
   if (whereFrom === 'no' || whereFrom === 'n') {
@@ -18,7 +18,7 @@ function question1(){
   } else {
     alert('Nope! He\'s actually from Michigan. He\'s lived here for about 2 1/2 years.');
     userScore = 0;
-  };
+  }
   alert('You\'ve guessed correctly ' + userScore + ' time(s).');
 }
 question1();
@@ -33,6 +33,7 @@ function question2 (){
   }else {
     alert ('Nope. He has lived with lots of roommates who have cates though, so.. vicariously livin I suppose.');
   };
+  alert('You have guessed correctly ' + userScore + ' time(s).');
 }
 question2();
 
@@ -44,7 +45,7 @@ function question3 (){
     userScore++;
   }else {
     alert (' Actually, he wouldn\'t be opposed to the idea. I mean it would be kinda cool right!?!?');
-  };
+  }
   alert('You have guessed correctly ' + userScore + ' time(s).');
 }
 question3();
@@ -75,14 +76,15 @@ function question5(){
 }
 question5();
 
-var question7 = function(){
+//QUESTION 6
+var question6 = function(){
   var luckyGuess = 3;
   var notCorrect = 5;
   var isCorrect = false;
 
   var mindFreak = parseInt(prompt('Lets try and read Mikes mind, you only get 4 tries and can only use whole numbers. He\'s thinking of a number between 1 and 5? What is it!?!?!'));
 
-  while (isCorrect === false || notCorrect > 1){
+  while (isCorrect === false && (notCorrect > 1)){
     console.log('Inside of while loop.');
     if(mindFreak === 3){
       alert('Lucky guess.....');
@@ -99,10 +101,15 @@ var question7 = function(){
       mindFreak = prompt('He\'s thinking of a number between 1 and 5? What is it!?!?!');
     }
   }
+  if(notCorrect === 0 && (mindFreak !== luckyGuess)){
+    alert('Thats incorrect and your out of guesses. Guess your no Dr. X.');
+  };
+  alert('You have guessed correctly ' + userScore + ' time(s).');
 };
-question7();
+question6();
 
-var question8 = function(){
+//QUESTION 7
+var question7 = function(){
   var carsOwned = ['ford','alfa romeo','buick'];
   var notCorrect = 6;
   var car1 = carsOwned[0];
@@ -119,6 +126,10 @@ var question8 = function(){
       carMake = prompt('Nope, thats not on the list, guess again. You have ' + notCorrect + ' tries left.');
       notCorrect--;
     }
-  }
+  };
+  if(notCorrect === 0 && (carMake !== isCorrect)){
+    alert('Thats not correct and your out of tries (sad face).');
+  };
+  alert('You have guessed correctly ' + userScore + ' time(s).');
 };
-question8();
+question7();
